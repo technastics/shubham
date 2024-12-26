@@ -38,7 +38,7 @@ h1 {
 }
 
 body.dark-mode h1 {
-    color: red;
+    color: #888; /* Same color as empty message */
 }
 
 #dateTime {
@@ -48,7 +48,7 @@ body.dark-mode h1 {
 }
 
 body.dark-mode #dateTime {
-    color: red;
+    color: #888; /* Same color as empty message */
 }
 
 .mode-toggle {
@@ -60,12 +60,12 @@ body.dark-mode #dateTime {
 
 #modeText {
     transition: color 0.3s;
-    font-size: 1.5em; /* Increased font size for mode status text */
-    font-weight: bold; /* Added bold font weight for emphasis */
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 body.dark-mode #modeText {
-    color: red;
+    color: #888; /* Same color as empty message */
 }
 
 #modeIcons {
