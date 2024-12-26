@@ -1,0 +1,182 @@
+:root {
+    --light-bg: url('https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2029&auto=format&fit=crop');
+    --dark-bg: url('https://images.unsplash.com/photo-1483401757487-2ced3fa77952?q=80&w=2073&auto=format&fit=crop');
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: var(--light-bg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+    margin: 0;
+    padding: 40px;
+    transition: background-image 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-image: var(--dark-bg);
+    color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .container {
+    background: rgba(68, 68, 68, 0.8);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+body.dark-mode h1 {
+    color: red;
+}
+
+#dateTime {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+body.dark-mode #dateTime {
+    color: red;
+}
+
+.mode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#modeText {
+    transition: color 0.3s;
+    font-size: 1.5em; /* Increased font size for mode status text */
+    font-weight: bold; /* Added bold font weight for emphasis */
+}
+
+body.dark-mode #modeText {
+    color: red;
+}
+
+#modeIcons {
+   display: flex;
+   gap: 15px;
+}
+
+.icon {
+   font-size: 30px;
+   cursor: pointer;
+   transition: transform 0.2s;
+   display: inline-block;
+}
+
+.icon:hover {
+   transform: scale(1.2);
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    margin: 20px 0;
+}
+
+body.dark-mode .divider {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
+.task-input {
+    display: flex;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+   flex-grow: 1;
+   padding: 15px;
+   margin-right: 10px;
+   font-size: 1.2em;
+}
+
+button {
+   padding: 15px;
+   background-color: #28a745;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 1.2em;
+}
+
+button:hover {
+   background-color: #218838;
+}
+
+.empty-message {
+   display: none;
+   text-align: center;
+   margin-top: 20px;
+   color: #888;
+   font-size: 1.2em;
+}
+
+ul {
+   list-style-type: none;
+   padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: #333;
+}
+
+body.dark-mode li {
+    background-color: #555;
+    color: #f4f4f4;
+}
+
+.serial-number {
+    min-width: 30px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+input[type='checkbox'] {
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+
+.task-text {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.task-time {
+    font-size: 0.8em;
+    color: #666;
+    margin-right: 10px;
+}
+
+body.dark-mode .task-time {
+    color: #aaa;
+}
+
+li button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    font-size: 0.9em;
+}
